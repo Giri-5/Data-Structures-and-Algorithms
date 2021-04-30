@@ -85,6 +85,16 @@ class Linkedlist:
       temp = temp.next
       i += 1
 
+  def reverse(self):
+    prev = None
+    while self.head != None:
+      temp = self.head
+      self.head = self.head.next
+      temp.next = prev
+      prev = temp
+
+    self.head = prev
+
 
   def print(self):
 
@@ -97,8 +107,7 @@ class Linkedlist:
     print("Length of the list", self.length)
     
 
-  def reverse():
-    print()
+  
     
 
 
@@ -113,6 +122,8 @@ print(llist.append(20))
 print(llist.append(30))
 print(llist.append(40))
 
-llist.insert(1,15)
-llist.remove(2)
+"""llist.insert(1,15)
+llist.remove(2)"""
+llist.print()
+llist.reverse()
 llist.print()
